@@ -1,0 +1,25 @@
+spring:
+  datasource-meta:
+    driver-class-name: org.mariadb.jdbc.Driver
+    jdbc-url: jdbc:mariadb://127.0.0.1:3306/meta
+    username: meta
+    password: meta
+
+  datasource-data:
+    driver-class-name: org.mariadb.jdbc.Driver
+    jdbc-url: jdbc:mariadb://127.0.0.1:3306/data
+    username: data
+    password: data
+
+  batch:
+    jdbc:
+      initialize-schema: never # always|never
+      schema: classpath:org/springframework/batch/core/schema-mariadb.sql
+
+logging:
+  level:
+    root: info
+    com.sil.springbatch: debug
+    jdbc:
+      sqlonly: debug
+      resultsettable: debug
