@@ -12,9 +12,12 @@ spring:
     password: data
 
   batch:
+    job:
+      enabled: false
     jdbc:
       initialize-schema: never # always|never
       schema: classpath:org/springframework/batch/core/schema-mariadb.sql
+
 
 logging:
   level:

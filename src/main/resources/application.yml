@@ -1,6 +1,3 @@
 spring:
   profiles.active: local  # run configuration 에서 local주입해서 사용
 
-  batch:
-    job:
-      enabled: false
